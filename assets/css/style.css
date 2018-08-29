@@ -198,7 +198,7 @@ header {
   color: #ffffff;
 }
 
-/* line 60, ../scss/_code.scss */
+/* line 55, ../scss/_code.scss */
 .main-menu {
   position: absolute;
   left: -200px;
@@ -209,23 +209,19 @@ header {
   transition: left 0.3s ease, box-shadow 0.3s ease;
   z-index: 999;
 }
-
-/* line 72, ../scss/_code.scss */
+/* line 64, ../scss/_code.scss */
 .main-menu ul {
   list-style: none;
   margin: 0;
   padding: 32px 0 0;
-  /* Hide shadow w/ -8px while 'closed' */
   -webkit-box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
   box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
   min-height: 100%;
   width: 200px;
   background: #1a1a1a;
-  padding: 0 10px 0 10px;
 }
-
-/* line 86, ../scss/_code.scss */
+/* line 75, ../scss/_code.scss */
 .main-menu a {
   display: block;
   padding: 0 10px;
@@ -235,13 +231,11 @@ header {
   text-decoration: none;
   border-bottom: 1px solid #383838;
 }
-
-/* line 96, ../scss/_code.scss */
+/* line 84, ../scss/_code.scss */
 .main-menu li:first-child a {
   border-top: 1px solid #383838;
 }
-
-/* line 100, ../scss/_code.scss */
+/* line 87, ../scss/_code.scss */
 .main-menu a .icon {
   width: 20px;
   float: left;
@@ -251,101 +245,43 @@ header {
   background-position: 50% center;
 }
 
-/* line 109, ../scss/_code.scss */
-.itema {
+/* line 97, ../scss/_code.scss */
+.itema, .itemb, .itemc, .itemd, .iteme, .itemf, .itemg {
   background-image: url("../images/item.jpg");
 }
 
-/* line 112, ../scss/_code.scss */
-.itemb {
-  background-image: url("../images/item.jpg");
-}
-
-/* line 115, ../scss/_code.scss */
-.itemc {
-  background-image: url("../images/item.jpg");
-}
-
-/* line 118, ../scss/_code.scss */
-.itemd {
-  background-image: url("../images/item.jpg");
-}
-
-/* line 121, ../scss/_code.scss */
-.iteme {
-  background-image: url("../images/item.jpg");
-}
-
-/* line 124, ../scss/_code.scss */
-.itemf {
-  background-image: url("../images/item.jpg");
-}
-
-/* line 127, ../scss/_code.scss */
-.itemg {
-  background-image: url("../images/item.jpg");
-}
-
-/* line 133, ../scss/_code.scss */
-.main-menu a:hover,
-.main-menu a:focus {
+/* line 103, ../scss/_code.scss */
+.main-menu a:hover, .main-menu a:focus {
   background-color: #ece0fd;
   border-radius: 5px;
 }
-@media (max-width: 800px) {
-  /* line 133, ../scss/_code.scss */
-  .main-menu a:hover,
-  .main-menu a:focus {
-    background-color: initial;
-  }
-}
-
-/* line 141, ../scss/_code.scss */
+/* line 108, ../scss/_code.scss */
 .main-menu .menu-close {
   position: absolute;
   right: 0;
   top: 0;
   border-bottom: 0;
 }
-
-/*
- On small devices, allow it to toggle...
-*/
-/*
- :target for non-JavaScript
- aria-expanded="true/false" will be for JavaScript
-*/
-/* line 156, ../scss/_code.scss */
-.main-menu:target,
-.main-menu[aria-expanded="true"] {
+/* line 114, ../scss/_code.scss */
+.main-menu:target, .main-menu[aria-expanded="true"] {
   left: 0;
   outline: none;
   -moz-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
   box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
 }
-
-/* line 165, ../scss/_code.scss */
-.main-menu:target .menu-close,
-.main-menu[aria-expanded="true"] .menu-close {
+/* line 121, ../scss/_code.scss */
+.main-menu:target .menu-close, .main-menu[aria-expanded="true"] .menu-close {
   z-index: 1001;
 }
-
-/* line 170, ../scss/_code.scss */
-.main-menu:target ul,
-.main-menu[aria-expanded="true"] ul {
+/* line 124, ../scss/_code.scss */
+.main-menu:target ul, .main-menu[aria-expanded="true"] ul {
   padding: 32px 0 0 0;
   position: relative;
   z-index: 1000;
 }
-
-/* 
- We could us `.main-menu:target:after`, but
- it wouldn't be clickable.
-*/
-/* line 181, ../scss/_code.scss */
-.main-menu:target + .backdrop,
-.main-menu[aria-expanded="true"] + .backdrop {
+/* line 129, ../scss/_code.scss */
+.main-menu:target + .backdrop, .main-menu[aria-expanded="true"] + .backdrop {
   position: absolute;
   display: block;
   content: "";
@@ -360,7 +296,7 @@ header {
 }
 
 @supports (position: fixed) {
-  /* line 198, ../scss/_code.scss */
+  /* line 147, ../scss/_code.scss */
   .main-menu,
   .main-menu:target + .backdrop,
   .main-menu[aria-expanded="true"] + .backdrop {
@@ -368,13 +304,12 @@ header {
   }
 }
 @media (min-width: 768px) {
-  /* line 205, ../scss/_code.scss */
-  .menu-toggle,
-  .main-menu .menu-close {
+  /* line 153, ../scss/_code.scss */
+  .menu-toggle {
     display: none;
   }
 
-  /* line 209, ../scss/_code.scss */
+  /* line 157, ../scss/_code.scss */
   .main-menu {
     background-color: #ffffff;
     width: 206px;
@@ -383,8 +318,11 @@ header {
     top: 70px;
     border-right: 1px #ebebeb solid;
   }
-
-  /* line 218, ../scss/_code.scss */
+  /* line 158, ../scss/_code.scss */
+  .main-menu .menu-close {
+    display: none;
+  }
+  /* line 167, ../scss/_code.scss */
   .main-menu ul {
     height: auto;
     width: auto;
@@ -393,35 +331,31 @@ header {
     -moz-box-shadow: none;
     box-shadow: none;
   }
-
-  /* line 228, ../scss/_code.scss */
+  /* line 177, ../scss/_code.scss */
   .main-menu li {
     width: 100%;
     height: 32px;
     float: left;
     padding: 0 10px 0 10px;
   }
-
-  /* line 234, ../scss/_code.scss */
+  /* line 183, ../scss/_code.scss */
   .main-menu a {
     width: 100%;
     float: left;
     color: #383838;
     border: 0 !important;
   }
-
-  /* line 242, ../scss/_code.scss */
-  .main-menu a:hover,
-  .main-menu a:focus {
+  /* line 188, ../scss/_code.scss */
+  .main-menu a:hover, .main-menu a:focus {
     color: #c00;
   }
 }
-/* line 250, ../scss/_code.scss */
+/* line 195, ../scss/_code.scss */
 .logo {
   color: #ffffff;
 }
 
-/* line 254, ../scss/_code.scss */
+/* line 199, ../scss/_code.scss */
 .product-list {
   padding: 20px 0 20px 20px;
   width: 100%;
@@ -430,13 +364,13 @@ header {
   height: calc(100% - 70px);
 }
 @media (max-width: 800px) {
-  /* line 254, ../scss/_code.scss */
+  /* line 199, ../scss/_code.scss */
   .product-list {
     padding: 0 10px 20px 10px;
     height: calc(100% - 50px);
   }
 }
-/* line 264, ../scss/_code.scss */
+/* line 209, ../scss/_code.scss */
 .product-list figure {
   width: 100%;
   float: left;
@@ -444,12 +378,12 @@ header {
   position: relative;
 }
 @media (max-width: 800px) {
-  /* line 264, ../scss/_code.scss */
+  /* line 209, ../scss/_code.scss */
   .product-list figure {
     padding: 10px 0 0 40px;
   }
 }
-/* line 272, ../scss/_code.scss */
+/* line 217, ../scss/_code.scss */
 .product-list figure .placeholder {
   background-color: #a3a3a3;
   width: 60px;
@@ -463,14 +397,14 @@ header {
   line-height: 60px;
 }
 @media (max-width: 800px) {
-  /* line 272, ../scss/_code.scss */
+  /* line 217, ../scss/_code.scss */
   .product-list figure .placeholder {
     width: 30px;
     height: 30px;
     line-height: 30px;
   }
 }
-/* line 289, ../scss/_code.scss */
+/* line 234, ../scss/_code.scss */
 .product-list figure figcaption {
   width: 100%;
   float: left;
@@ -482,7 +416,7 @@ header {
   border-bottom: 2px #efefef solid;
 }
 @media (max-width: 800px) {
-  /* line 289, ../scss/_code.scss */
+  /* line 234, ../scss/_code.scss */
   .product-list figure figcaption {
     border-bottom: 0;
     height: auto;
@@ -491,19 +425,19 @@ header {
     text-align: left;
   }
 }
-/* line 305, ../scss/_code.scss */
+/* line 250, ../scss/_code.scss */
 .product-list figure figcaption h2 {
   color: #444444;
   float: left;
 }
 @media (max-width: 800px) {
-  /* line 305, ../scss/_code.scss */
+  /* line 250, ../scss/_code.scss */
   .product-list figure figcaption h2 {
     width: 100%;
     font-size: 16px;
   }
 }
-/* line 313, ../scss/_code.scss */
+/* line 258, ../scss/_code.scss */
 .product-list figure figcaption p {
   width: 100%;
   float: left;
@@ -514,20 +448,20 @@ header {
   left: 0;
 }
 @media (max-width: 800px) {
-  /* line 313, ../scss/_code.scss */
+  /* line 258, ../scss/_code.scss */
   .product-list figure figcaption p {
     width: 175px;
     font-size: 14px;
     position: initial;
   }
 }
-/* line 326, ../scss/_code.scss */
+/* line 271, ../scss/_code.scss */
 .product-list figure figcaption p.ellipsis {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 332, ../scss/_code.scss */
+/* line 277, ../scss/_code.scss */
 .product-list figure figcaption .small-box {
   background-color: #bdbdbd;
   width: 20px;
