@@ -1,0 +1,39 @@
+// Variables
+// --------------------
+
+//== Global colors for use
+
+$heading-color:     #282828 !default;
+$paragraph-color:   #787878 !default;
+
+
+//== Background color for `<body>`.
+$body-bg:           #ffffff !default;
+
+//== Typography
+$font-medium:       'NHaasGroteskDSPro-65Md';
+$font-regular:      'NHaasGroteskDSPro-55Rg';
+
+//== Font size
+$font-size-base:    14px !default;
+$font-size-h1:      22px !default;
+$font-size-h2:      18px !default;
+
+//== line-height
+$line-height-base:  1; 
+
+
+$max-width: 800px;
+$min-width: 654px;
+
+//== RESPONSIVE BREAKPOINTS
+@mixin md {
+    @media (max-width: #{$max-width}) {
+        @content;
+    }
+}
+@mixin sm {
+    @media (max-width: #{$min-width}) {
+        @content;
+    }
+}

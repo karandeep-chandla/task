@@ -1,0 +1,345 @@
+header {
+    background-color: #6200ee;
+		width: 100%;
+		height: 70px;
+		line-height: 70px;
+		padding: 0 20px 0 20px;
+    float: left;    
+    display: flex;
+		align-items: baseline;
+		@include md {
+			height: 50px;
+			line-height: 50px;
+      padding: 0;
+      position: fixed;
+      top: 0;
+    }
+    h1 {
+      @include md {
+        font-size: 18px;
+      }
+    }
+}
+
+.container {
+	width: 100%;
+  float: left;
+  height: 100vh;
+	position: relative;
+  padding: 0 0 0 206px;
+  @include md {
+    padding: 0;
+    top: 50px;
+  }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+  
+  .menu-toggle {
+    display: inline-block;
+    padding: 0 15px;
+    line-height: 1em;
+    font-size: 1em;
+    color: #ffffff;
+  }
+  
+  // .menu-toggle:hover,
+  // .menu-toggle:focus {
+  //   color: #c00;
+  // }
+  
+  .main-menu {
+    position: absolute;
+    left: -200px;
+    top: 0;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: visible;
+    transition: left 0.3s ease,
+    box-shadow 0.3s ease;
+    z-index: 999;
+  }
+  
+  .main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 32px 0 0;
+    /* Hide shadow w/ -8px while 'closed' */
+    -webkit-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+       -moz-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+            box-shadow: -8px 0 8px rgba(0,0,0,.5);
+    min-height: 100%;
+    width: 200px;
+    background: #1a1a1a;
+    padding: 0 10px 0 10px;
+  }
+  
+  .main-menu a {
+    display: block;
+    padding: 0 10px;
+    line-height: 32px;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #383838;
+  }
+  
+  .main-menu li:first-child a {
+    border-top: 1px solid #383838;
+  }
+  
+  .main-menu a .icon {
+    width: 20px;
+    float: left;
+    margin: 0 26px 0 0;
+    text-indent: -5000px;
+    background-repeat: no-repeat;
+    background-position: 50% center;
+  }
+
+  .itema {
+    background-image: url('../images/item.jpg');
+  }
+  .itemb {
+    background-image: url('../images/item.jpg');
+  }
+  .itemc {
+    background-image: url('../images/item.jpg');
+  }
+  .itemd {
+    background-image: url('../images/item.jpg');
+  }
+  .iteme {
+    background-image: url('../images/item.jpg');
+  }
+  .itemf {
+    background-image: url('../images/item.jpg');
+  }
+  .itemg {
+    background-image: url('../images/item.jpg');
+  }
+  
+
+  .main-menu a:hover,
+  .main-menu a:focus {
+    background-color: #ece0fd;
+    border-radius: 5px;
+    @include md {
+      background-color: initial;
+    }    
+  }
+  
+  .main-menu .menu-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom: 0;
+  }
+  
+  /*
+   On small devices, allow it to toggle...
+  */
+  /*
+   :target for non-JavaScript
+   aria-expanded="true/false" will be for JavaScript
+  */
+  .main-menu:target,
+  .main-menu[aria-expanded="true"] {
+    left: 0;
+    outline: none;
+    -moz-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+    -webkit-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+    box-shadow: 3px 0 12px rgba(0,0,0,.25);
+  }
+  
+  .main-menu:target .menu-close,
+  .main-menu[aria-expanded="true"] .menu-close {
+    z-index: 1001;
+  }
+  
+  .main-menu:target ul,
+  .main-menu[aria-expanded="true"] ul {
+    padding: 32px 0 0 0;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  /* 
+   We could us `.main-menu:target:after`, but
+   it wouldn't be clickable.
+  */
+  .main-menu:target + .backdrop,
+  .main-menu[aria-expanded="true"] + .backdrop {
+    position: absolute;
+    display: block;  
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background: #000;
+    background: rgba(0,0,0,.3);
+    cursor: default;
+  }
+  
+  @supports (position: fixed) {
+    .main-menu,
+    .main-menu:target + .backdrop,
+    .main-menu[aria-expanded="true"] + .backdrop {
+      position: fixed;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .menu-toggle,
+    .main-menu .menu-close {
+      display: none;
+    }
+    
+    .main-menu {
+			background-color: #ffffff;
+			width: 206px;
+			float: left;
+			left: 0;
+			top: 70px;
+			border-right: 1px #ebebeb solid;	
+    }
+    
+    .main-menu ul {
+      // display: flex;
+      height: auto;
+      width: auto;
+      background: none;
+      // padding: 32px 0 0 0;
+      -webkit-box-shadow: none;
+         -moz-box-shadow: none;
+              box-shadow: none;
+    }
+    .main-menu li {
+			width: 100%;
+			height: 32px;
+      float: left;
+      padding: 0 10px 0 10px;
+		}
+    .main-menu a {
+			width: 100%;
+			float: left;
+      color: #383838;
+      border: 0 !important;
+    }
+    
+    .main-menu a:hover,
+    .main-menu a:focus {
+      color: #c00;
+    }
+  }
+  
+
+  
+  
+  .logo {
+    color: #ffffff;
+	}
+	
+	.product-list {
+    padding: 20px 0 20px 20px;
+    width: 100%;
+    font-size: 16px;
+    overflow-y: auto;
+    height: calc(100% - 70px);
+    @include md {
+      padding: 0 10px 20px 10px;
+      height: calc(100% - 50px);
+		}
+		figure {
+			width: 100%;
+      float: left;
+      padding: 10px 0 0 75px;
+      position: relative;
+      @include md {
+        padding: 10px 0 0 40px;
+      }
+			.placeholder {
+				background-color: #a3a3a3;
+				width: 60px;
+				height: 60px;
+				float: left;
+				border-radius: 100%;
+        margin: 0 15px 0 0;
+        position: absolute;
+        left: 0;
+        text-align: center;
+        line-height: 60px;
+        @include md {
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+        }
+			}
+			figcaption {
+        width: 100%;
+        float: left;
+        height: 70px;
+        line-height: 60px;
+        padding: 0 20px 10px 0;
+        text-align: center;
+        position: relative;
+        border-bottom: 2px #efefef solid;
+        @include md {
+          border-bottom: 0;
+          height: auto;
+          line-height: initial;
+          padding: 0 0 10px 0;
+          text-align: left;
+        }
+				h2 {
+          color: #444444;
+          float: left;
+          @include md {
+            width: 100%;
+            font-size: 16px;
+          }
+				}
+				p {
+          width: 100%;
+          float: left;
+          font-size: 16px;
+          color: #9a9a9a;
+          display: initial;
+          position: absolute;
+          left: 0;
+          @include md {
+            width: 175px;
+            font-size: 14px;
+            position: initial;
+          }
+          &.ellipsis {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+				}
+				.small-box {
+					background-color: #bdbdbd;
+					width: 20px;
+					height: 20px;
+          float: right;
+          position: relative;
+          top: 50%;
+          margin: -10px 0 0 0;
+					text-indent: -5000px;
+				}
+			}
+		}
+  }
+  

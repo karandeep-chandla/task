@@ -1,0 +1,74 @@
+// Global CSS
+// -----------------
+
+* {
+  box-sizing: border-box; 
+}
+*:before,
+*:after {
+  box-sizing: border-box;   
+}
+body {
+  background: $body-bg;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  -webkit-text-size-adjust:100%;
+  -moz-text-size-adjust:100%;
+  -ms-text-size-adjust:100%; 
+  -webkit-appearance: none;
+  overflow: hidden;
+}
+* { 
+  margin: 0; 
+  padding: 0; 
+  border: 0; 
+  outline: 0; 
+  font-size: 100%; 
+  vertical-align: baseline; 
+  background: transparent; 
+  box-sizing: border-box; 
+}
+article, aside, figure, footer, header, hgroup, nav, section { 
+  display: block; 
+}
+img, object, embed { 
+  max-width: 100%; 
+}
+ul { 
+  list-style: none; 
+}
+a { 
+  border:none; 
+  margin: 0; 
+  padding: 0; 
+  font-size: 100%; 
+  vertical-align: baseline; 
+  background: transparent; 
+  text-decoration:none; 
+}
+img { 
+  border:none; 
+}
+:focus { 
+  outline:0; 
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+.width100 { 
+  width:100%; 
+	float:left; 
+}
+h1 {
+  font-family: $font-medium;
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-family: $font-medium;
+  font-size: $font-size-h2;
+}
