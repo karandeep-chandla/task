@@ -2,73 +2,84 @@
 // -----------------
 
 * {
-  box-sizing: border-box; 
+	box-sizing: border-box; 
 }
 *:before,
 *:after {
-  box-sizing: border-box;   
+	box-sizing: border-box;   
 }
 body {
-  background: $body-bg;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  -webkit-text-size-adjust:100%;
-  -moz-text-size-adjust:100%;
-  -ms-text-size-adjust:100%; 
-  -webkit-appearance: none;
-  overflow: hidden;
+	background: $body-bg;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	-webkit-text-size-adjust:100%;
+	-moz-text-size-adjust:100%;
+	-ms-text-size-adjust:100%; 
+	-webkit-appearance: none;
+	overflow: hidden;
 }
 * { 
-  margin: 0; 
-  padding: 0; 
-  border: 0; 
-  outline: 0; 
-  font-size: 100%; 
-  vertical-align: baseline; 
-  background: transparent; 
-  box-sizing: border-box; 
+	margin: 0; 
+	padding: 0; 
+	border: 0; 
+	outline: 0; 
+	font-size: 100%; 
+	vertical-align: baseline; 
+	background: transparent; 
+	box-sizing: border-box; 
+	transition: background 0.5s ease-in-out 0s, padding 0.5s ease-in-out 0s;
 }
 article, aside, figure, footer, header, hgroup, nav, section { 
-  display: block; 
+	display: block; 
 }
 img, object, embed { 
-  max-width: 100%; 
+	max-width: 100%; 
 }
 ul { 
-  list-style: none; 
+	list-style: none; 
 }
 a { 
-  border:none; 
-  margin: 0; 
-  padding: 0; 
-  font-size: 100%; 
-  vertical-align: baseline; 
-  background: transparent; 
-  text-decoration:none; 
+	border:none; 
+	margin: 0; 
+	padding: 0; 
+	font-size: 100%; 
+	vertical-align: baseline; 
+	background: transparent; 
+	text-decoration:none; 
 }
 img { 
-  border:none; 
+	border:none; 
 }
 :focus { 
   outline:0; 
 }
 @mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
 }
-.width100 { 
-  width:100%; 
+%width100 { 
+  	width:100%; 
 	float:left; 
 }
 h1 {
-  font-family: $font-medium;
-  font-size: $font-size-h1;
+	font-family: 'NHaasGroteskDSPro-65Md';
+	font-size: $font-size-h1;
 }
-
 h2 {
-  font-family: $font-medium;
-  font-size: $font-size-h2;
+	font-family: 'NHaasGroteskDSPro-55Rg';
+	font-size: $font-size-h2;
+}
+.container {
+	width: 100%;
+	float: left;
+	height: 100vh;
+	position: relative;
+	padding: 0 0 0 206px;
+  @include maxwidth {
+	padding: 0;
+	top: 50px;
+  }
 }

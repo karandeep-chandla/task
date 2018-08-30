@@ -1,0 +1,116 @@
+.product-list {
+  width: 100%;
+  padding: 20px 0 0 20px;
+  font-size: 16px;
+  overflow-y: auto;
+  height: calc(100% - 70px);
+  @include width1024 {
+    padding: 10px 0 0 10px;
+  }
+  @include maxwidth {
+    padding: 0 0 0 10px;
+    height: calc(100% - 50px);
+  }
+  figure {
+    @extend %width100;
+    padding: 10px 0 0 75px;
+    position: relative;
+    @include width1024 {
+      padding: 10px 0 0 50px;
+    }
+    @include maxwidth {
+      padding: 10px 0 0 40px;
+    }
+    .placeholder {
+      background-color: #a3a3a3;
+      width: 60px;
+      height: 60px;
+      float: left;
+      @include border-radius(100%);
+      margin: 0 15px 0 0;
+      position: absolute;
+      left: 0;
+      text-align: center;
+      line-height: 60px;
+      @include width1024 {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+      }
+      @include smallerwidth {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+    figcaption {
+      @extend %width100;
+      height: 70px;
+      line-height: 60px;
+      padding: 0 20px 10px 0;
+      text-align: center;
+      position: relative;
+      border-bottom: 2px #efefef solid;
+      @include width1024 {
+        height: 50px;
+        line-height: 40px;
+        padding: 0 10px 10px 10px;
+      }
+      @include smallerwidth {
+        border-bottom: 0;
+        height: auto;
+        line-height: initial;
+        padding: 0 10px 10px 0;
+        text-align: left;
+      }
+      h2 {
+        color: $heading-color;
+        float: left;
+        line-height: 56px;
+        @include width1024 {
+          font-size: 14px;
+          line-height: 38px;
+        }
+        @include smallerwidth {
+          width: 100%;
+          line-height: initial;
+        }
+      }
+      p {
+        @extend %width100;
+        font-size: 16px;
+        color: $paragraph-color;
+        position: absolute;
+        left: 0;
+        padding: 0 50px 0 120px;
+        @include width1024 {
+          font-size: 12px;
+          padding: 0 40px 0 100px;
+        }
+        @include smallerwidth {
+          width: 175px;
+          font-size: 14px;
+          display: initial;
+          position: initial;
+          padding: 0;
+        }
+        &.ellipsis {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+      .small-box {
+        background-color: #bdbdbd;
+        width: 20px;
+        height: 20px;
+        float: right;
+        position: relative;
+        top: 50%;
+        margin: -10px 0 0 0;
+        text-indent: -5000px;
+      }
+    }
+  }
+}
+  

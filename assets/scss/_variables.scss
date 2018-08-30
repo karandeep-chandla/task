@@ -4,15 +4,12 @@
 //== Global colors for use
 
 $heading-color:     #282828 !default;
-$paragraph-color:   #787878 !default;
+$paragraph-color:   #9a9a9a !default;
 
 
 //== Background color for `<body>`.
 $body-bg:           #ffffff !default;
 
-//== Typography
-$font-medium:       'NHaasGroteskDSPro-65Md';
-$font-regular:      'NHaasGroteskDSPro-55Rg';
 
 //== Font size
 $font-size-base:    14px !default;
@@ -22,18 +19,30 @@ $font-size-h2:      18px !default;
 //== line-height
 $line-height-base:  1; 
 
-
+//== Resolutions
+$width1000: 1024px;
 $max-width: 800px;
-$min-width: 654px;
+$min-width: 801px;
+$smaller-width: 654px;
 
-//== RESPONSIVE BREAKPOINTS
-@mixin md {
+//== BREAKPOINTS
+@mixin width1024 {
+    @media (max-width: #{$width1000}) {
+        @content;
+    }
+}
+@mixin maxwidth {
     @media (max-width: #{$max-width}) {
         @content;
     }
 }
-@mixin sm {
-    @media (max-width: #{$min-width}) {
+@mixin minwidth {
+    @media (min-width: #{$min-width}) {
+        @content;
+    }
+}
+@mixin smallerwidth {
+    @media (max-width: #{$smaller-width}) {
         @content;
     }
 }
